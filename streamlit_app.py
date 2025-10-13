@@ -347,8 +347,4 @@ with info:
 # ---------------------- Footer ----------------------
 with st.expander("How scoring works (evaluation function)"):
     st.markdown(
-        "- AI win: **+10** (minus search depth to prefer faster wins)\n"
-        "- Opponent win: **-10** (plus search depth to prefer slower losses)\n"
-        "- Draw: **0**\n"
-        "- Alpha-Beta shows **pruned node count** and **pruning efficiency**."
-    )
+        "Tic-Tac-Toe is a **two-player, zero-sum, deterministic, perfect-information, sequential game** played on a 3×3 board. Players take turns marking empty cells with their symbol ('X' or 'O'). The first player to align three symbols in a row (horizontally, vertically, or diagonally) wins. If the board fills up with no winner, the game ends in a draw.")
