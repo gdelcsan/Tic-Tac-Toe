@@ -302,6 +302,7 @@ def ai_move(which_algo: str, ai_symbol: str):
 
 # ---------------------- Header ----------------------
 st.markdown('<div class="header"><h1>Tic-Tac-Toe Games</h1><p>Double click a tile to make a move</p></div>', unsafe_allow_html=True)
+st.audio("./soundgame.mp3", format="audio/mp3", autoplay=True, loop=True)
 
 meta_col1, meta_col2, meta_col3 = st.columns(3)
 meta_col1.metric("Mode", st.session_state.mode)
