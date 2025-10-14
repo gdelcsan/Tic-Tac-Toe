@@ -89,7 +89,7 @@ def add_bg_from_url(url):
     page_bg_img = f'''
     <style>
     .stApp {{
-        background-image: url("{https://www.creativefabrica.com/wp-content/uploads/2022/08/17/1660722853/Tic-Tac-Toe-Board-Minimalist-black-version-580x386.jpg}");
+        background-image: url("{//www.creativefabrica.com/wp-content/uploads/2022/08/17/1660722853/Tic-Tac-Toe-Board-Minimalist-black-version-580x386.jpg}");
         background-size: cover;
         background-attachment: fixed;
     }}
