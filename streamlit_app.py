@@ -357,4 +357,13 @@ with info:
 # ---------------------- Footer ----------------------
 with st.expander("How scoring works (evaluation function)"):
     st.markdown(
-        "Tic-Tac-Toe is a **two-player, zero-sum, deterministic, perfect-information, sequential game** played on a 3×3 board. Players take turns marking empty cells with their symbol ('X' or 'O'). The first player to align three symbols in a row (horizontally, vertically, or diagonally) wins. If the board fills up with no winner, the game ends in a draw.")
+        """
+        <p class='white-text'>
+        Tic-Tac-Toe is a <b>two-player, zero-sum, deterministic, perfect-information, sequential game</b> 
+        played on a 3×3 board. Players take turns marking empty cells with their symbol ('X' or 'O'). 
+        The first player to align three symbols in a row (horizontally, vertically, or diagonally) wins. 
+        If the board fills up with no winner, the game ends in a draw.
+        </p>
+        """,
+        unsafe_allow_html=True
+    )
