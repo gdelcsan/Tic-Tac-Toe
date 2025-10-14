@@ -8,12 +8,10 @@ st.set_page_config(page_title="Tic-Tac-Toe Games", page_icon="🕹️")
 
 st.markdown("""
     <style>
-    /* Set background color for the whole app */
     .stApp {
         background-color: #4A4548;
     }
             
-    /* Make widgets pop */
     .stButton>button {
         border-radius: 10px;
         background-color: #BA4C4C;
@@ -49,41 +47,36 @@ st.markdown("""
     }
             
     div[data-testid="stButton"] button {
-        aspect-ratio: 1 / 1;          /* Makes each button square */
-        height: auto;                 /* Keeps it responsive */
-        font-size: 2rem;              /* Makes X and O nice and big */
+        aspect-ratio: 1 / 1;
+        height: auto;       
+        font-size: 2rem;         
     }
             
     div.stButton > button:first-child {
     color: #E7C5C5;
     }
 
-    /* Hover effect */
     .stButton > button:hover {
     background-color: #C5E7E7;
     transform: scale(1.02);
     }
             
-    /* Title style */
     .header {
     color: #FFFFFF;
     text-align: center;
     padding: 2.5rem 1rem;
     }
 
-    /* Make the selectbox label text in the sidebar white */
     section[data-testid="stSidebar"] label p {
     color: white !important;
     font-weight: bold;     /* optional */
     }
 
-    /* Optional: make the dropdown text itself white */
     section[data-testid="stSidebar"] div[data-baseweb="select"] * {
     color: white !important;
     background-color: #222 !important;  /* optional: dark background for contrast */
     }
 
-    /* Optional: change the dropdown border color */
     section[data-testid="stSidebar"] div[data-baseweb="select"] {
     border: 1px solid #555 !important;
     border-radius: 6px;
@@ -374,7 +367,7 @@ with info:
         elif st.session_state.winner in ["X", "O"]:
             st.success(f"**{st.session_state.winner}** wins!")
         else:
-            st.markdown(f"""<div style="background-color: #222;color: white;padding: 0.75rem;border-radius: 8px;border: 1px solid #444;font-size: 1rem;"><b>{st.session_state.current}</b> to move.</div>""",unsafe_allow_html=True)
+            st.markdown(f"""<div style="background-color: #BA4C4C;color: white;padding: 0.75rem;border-radius: 8px;border: 1px solid #444;font-size: 1rem;"><b>{st.session_state.current}</b> to move.</div>""",unsafe_allow_html=True)
 
         if st.session_state.mode == "Human vs AI":
             st.markdown(f"<p class='white-text'>You are <b>{st.session_state.human_symbol}</b>. "f"AI plays <b>{'O' if st.session_state.human_symbol == 'X' else 'X'}</b> "f"using <b>{st.session_state.ai1_algo}</b>.</p>",unsafe_allow_html=True)
