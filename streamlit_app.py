@@ -10,21 +10,7 @@ st.markdown("""
     <style>
     /* Set background color for the whole app */
     .stApp {
-        background-color: #292528;
-    }
-
-    /* Change the expander title text color */
-    div[data-testid="stExpander"] div[role="button"] p {
-    color: white !important;         /* title font color */
-    font-weight: bold;              /* optional: make it bold */
-    font-size: 1rem;                /* optional: adjust size */
-    }
-
-    /* Optional: darken the expander background to match theme */
-    div[data-testid="stExpander"] div[role="button"] {
-    background-color: #222 !important;
-    border-radius: 8px;
-    padding: 0.5rem;
+        background-color: #4A4548;
     }
             
     /* Make widgets pop */
@@ -40,7 +26,7 @@ st.markdown("""
     }
 
     [data-testid="stSidebarContent"] {
-        background-color: #4A4548; 
+        background-color: #292528; 
         color: #FFFFFF; 
     }
             
