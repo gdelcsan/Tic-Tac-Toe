@@ -340,7 +340,7 @@ with info:
         elif st.session_state.mode == "AI vs AI (Auto-play)":
             st.caption(f"X uses **{st.session_state.ai1_algo}**, O uses **{st.session_state.ai2_algo}**. Use the sidebar to start/stop and adjust speed.")
         else:
-            st.markdown('<p style="color: #FFFFFF; font-size: 24px;">Two humans take turns on this device.</p>', unsafe_allow_html=True)
+            st.markdown('<p style="color: #FFFFFF; font-size: 12px;">Two humans take turns on this device.</p>', unsafe_allow_html=True)
 
     with right:
         st.markdown('<p style="color: #FFFFFF; font-size: 24px;">Preformance (per AI move)</p>', unsafe_allow_html=True)
