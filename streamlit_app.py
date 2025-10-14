@@ -82,6 +82,25 @@ st.markdown("""
     border-radius: 6px;
     }
 
+    /* Enlarge X / O on the board */
+    .ttt-wrapper div[data-testid="stButton"] > button {
+    font-size: clamp(2.6rem, 7vw, 4.2rem) !important;
+    line-height: 1 !important;
+    padding: 0 !important;
+    background-image: none !important;  /* in case you had image tiles earlier */
+    }
+
+    /* Keep empty cells blank but square (your empty label is a single space " ") */
+    .ttt-wrapper button[aria-label=" "] {
+    font-size: 0 !important;
+    }
+
+    /* Make sure tiles stay perfectly square */
+    .ttt-wrapper div[data-testid="stButton"] > button {
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    }
+
     </style>
 """, unsafe_allow_html=True)
 
@@ -321,6 +340,7 @@ def cell_label(i: int) -> str:
     if v == "O": return "⭕"
     return " "
 
+st.markdown('<div class="ttt-wrapper">', unsafe_allow_html=True)
 grid = st.container()
 with grid:
     for r in range(3):
@@ -336,6 +356,8 @@ with grid:
                     else:
                         if st.session_state.current == st.session_state.human_symbol:
                             drop_piece(i, st.session_state.current)
+        
+        st.markdown('</div>', unsafe_allow_html=True)
 
 # ---------------------- Human vs AI: trigger AI reply automatically ----------------------
 if st.session_state.mode == "Human vs AI" and not st.session_state.winner:
