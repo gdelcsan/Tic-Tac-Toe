@@ -347,7 +347,7 @@ with info:
         if st.session_state.perf_log:
             st.dataframe(st.session_state.perf_log, use_container_width=True)
         else:
-            st.caption("AI performance metrics will appear here when the AI makes a move.")
+            st.markdown('<p style="color: #FFFFFF; font-size: 12px;">AI performance metrics will appear here when the AI makes a move.</p>', unsafe_allow_html=True)
 
 # ---------------------- Footer ----------------------
 with st.expander("How scoring works (evaluation function)"):
