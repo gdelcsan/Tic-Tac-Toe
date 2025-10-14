@@ -365,9 +365,9 @@ with info:
         if st.session_state.winner == "Draw":
             st.success("It's a draw!")
         elif st.session_state.winner in ["X", "O"]:
-            st.success(f"**{st.session_state.winner}** wins!")
+            st.markdown(f"""<div style="background-color: #68A886;color: white;padding: 0.75rem;border-radius: 8px;border: 1px solid #444;font-size: 1rem;"><b>{st.session_state.current}</b> wins!</div>""",unsafe_allow_html=True)
         else:
-            st.markdown(f"""<div style="background-color: #8A4A4A;color: white;padding: 0.75rem;border-radius: 8px;border: 1px solid #444;font-size: 1rem;"><b>{st.session_state.current}</b> to move.</div>""",unsafe_allow_html=True)
+            st.markdown(f"""<div style="background-color: #8A4A4A;color: white;padding: 0.75rem;border-radius: 8px;border: 1px solid #444;font-size: 1rem;"><b>{st.session_state.current}</b>'s turn.</div>""",unsafe_allow_html=True)
 
         if st.session_state.mode == "Human vs AI":
             st.markdown(f"<p class='white-text'>You are <b>{st.session_state.human_symbol}</b>. "f"AI plays <b>{'O' if st.session_state.human_symbol == 'X' else 'X'}</b> "f"using <b>{st.session_state.ai1_algo}</b>.</p>",unsafe_allow_html=True)
