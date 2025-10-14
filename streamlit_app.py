@@ -344,17 +344,19 @@ if st.session_state.mode == "Human vs AI" and not st.session_state.winner:
         ai_move(st.session_state.ai1_algo, ai_symbol)
 
 # ---------------------- AI vs AI Autoplay ----------------------
-if st.session_state.mode == "AI vs AI (Auto-play)":
-    # Run a short loop this render if autoplay is True
-    if st.session_state.autoplay and not st.session_state.winner:
-        # Safety: cap number of sequential moves per rerun to keep UI responsive
-        steps_this_run = 2
-        for _ in range(steps_this_run):
-            if st.session_state.winner:
-                break
-            current_algo = st.session_state.ai1_algo if st.session_state.current == "X" else st.session_state.ai2_algo
-            ai_move(current_algo, st.session_state.current)
-            time.sleep(st.session_state.ai_delay)
+if st.session_state.mode == "AI vs AI (Auto-play)" and st.session_state.autoplay:
+    if not st.session_state.winner:
+        current_algo = (
+            st.session_state.ai1_algo
+            if st.session_state.current == "X"
+            else st.session_state.ai2_algo
+        )
+        ai_move(current_algo, st.session_state.current)
+
+        # ✅ rerun after each move to keep autoplaying
+        import time
+        time.sleep(st.session_state.ai_delay)  # respect your speed slider
+        st.rerun()
 
 # ---------------------- Info & Metrics ----------------------
 info = st.container()
