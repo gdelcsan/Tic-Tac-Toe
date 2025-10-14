@@ -92,7 +92,7 @@ st.markdown("""
 
     /* Keep empty cells blank but square (your empty label is a single space " ") */
     .ttt-wrapper button[aria-label=" "] {
-    font-size: 0 !important;
+    font-size: 10 !important;
     }
 
     /* Make sure tiles stay perfectly square */
