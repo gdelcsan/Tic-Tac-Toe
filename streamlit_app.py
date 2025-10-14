@@ -336,7 +336,7 @@ def cell_label(i: int) -> str:
     if st.session_state.win_line and i in st.session_state.win_line:
         if v == "X": return "✨❌✨"
         if v == "O": return "✨⭕✨"
-    if v == "X": return "❌"
+    if v == "X": return "X"
     if v == "O": return "⭕"
     return " "
 
