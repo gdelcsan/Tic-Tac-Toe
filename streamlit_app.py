@@ -20,6 +20,26 @@ st.markdown("""
         font-weight: 600;
     }
 
+    /* Make st.metric labels and values white */
+    div[data-testid="stMetricLabel"] {
+    color: white !important;
+    }
+
+    div[data-testid="stMetricValue"] {
+    color: white !important;
+    }
+
+    /* Optional: adjust font weights and sizes */
+    div[data-testid="stMetricLabel"] {
+    font-weight: 600;
+    font-size: 1rem;
+    }
+
+    div[data-testid="stMetricValue"] {
+    font-weight: 700;
+    font-size: 1.5rem;
+    }
+
     .white-text {
     color: white;
     font-size: 0.9rem;  /* similar size to caption */
