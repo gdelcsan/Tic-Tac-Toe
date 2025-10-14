@@ -265,7 +265,7 @@ def ai_move(which_algo: str, ai_symbol: str):
 st.markdown('<div class="header"><h1>Tic-Tac-Toe Games</h1><p>Compare classic adversarial search on a simple perfect‑information game.</p></div>', unsafe_allow_html=True)
 
 meta_col1, meta_col2, meta_col3 = st.columns(3)
-meta_col1.metric(mode, st.session_state.mode)
+meta_col1.metric("Mode", st.session_state.mode)
 algo_label = st.session_state.ai1_algo if st.session_state.mode != "AI vs AI (Auto-play)" else f"X: {st.session_state.ai1_algo} • O: {st.session_state.ai2_algo}"
 meta_col2.metric("Algorithm", algo_label)
 turn_txt = "Game Over" if st.session_state.winner else f"Turn: {st.session_state.current}"
