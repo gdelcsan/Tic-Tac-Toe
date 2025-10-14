@@ -201,7 +201,7 @@ init_state()
 st.sidebar.header("Game Settings")
 st.sidebar.caption("Press **Restart** to clean moves made")
 
-st.session_state.mode = st.sidebar.selectbox(" Selection", ["Human vs Human", "Human vs AI", "AI vs AI (Auto-play)"])
+st.session_state.mode = st.sidebar.selectbox("Mode Selection", ["Human vs Human", "Human vs AI", "AI vs AI (Auto-play)"])
 
 if st.session_state.mode == "Human vs AI":
     st.session_state.human_symbol = st.sidebar.radio("You play as", ["X", "O"], horizontal=True)
@@ -262,7 +262,7 @@ def ai_move(which_algo: str, ai_symbol: str):
     drop_piece(move, st.session_state.current)
 
 # ---------------------- Header ----------------------
-st.markdown('<div class="header"><h1>Tic-Tac-Toe Games</h1><p>Compare classic adversarial search on a simple perfect‑information game.</p></div>', unsafe_allow_html=True)
+st.markdown('<div class="header"><h1>Tic-Tac-Toe Games</h1><p>Double click a tile to make a move. You win when you place three of the same horizontally, vertically, or diagonally.</p></div>', unsafe_allow_html=True)
 
 meta_col1, meta_col2, meta_col3 = st.columns(3)
 meta_col1.metric("Mode", st.session_state.mode)
