@@ -85,20 +85,20 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-def add_bg_from_url(url):
-    page_bg_img = f'''
+def add_bg_from_url(url: str):
+    page_bg_img = f"""
     <style>
     .stApp {{
-        background-image: url("{//www.creativefabrica.com/wp-content/uploads/2022/08/17/1660722853/Tic-Tac-Toe-Board-Minimalist-black-version-580x386.jpg}");
+        background-image: url("{url}");
         background-size: cover;
         background-attachment: fixed;
+        background-position: center;
     }}
     </style>
-    '''
+    """
     st.markdown(page_bg_img, unsafe_allow_html=True)
 
-# Example usage with a URL
-add_bg_from_url("https://example.com/your_image.jpg")
+    add_bg_from_url("https://www.creativefabrica.com/wp-content/uploads/2022/08/17/1660722853/Tic-Tac-Toe-Board-Minimalist-black-version-580x386.jpg")
 
 # ---------------------- Game & AI Core ----------------------
 WIN_COMBOS = [
