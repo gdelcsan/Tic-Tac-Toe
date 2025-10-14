@@ -12,6 +12,10 @@ st.markdown("""
     .stApp {
         background-color: #4A4548;
     }
+
+    div[data-testid="stNotification"] p {
+    color: white !important;
+    }
             
     /* Make widgets pop */
     .stButton>button {
