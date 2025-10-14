@@ -83,7 +83,7 @@ st.markdown("""
     }
 
     .ttt-wrapper div[data-testid="stButton"] > button:focus {
-    outline: 5px solid #ffffff !important;       /* thickness and color */
+    outline: 20px solid #ffffff !important;       /* thickness and color */
     outline-offset: 2px;                         /* spacing between outline and button */
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.7) !important;  /* soft glow */
     }
