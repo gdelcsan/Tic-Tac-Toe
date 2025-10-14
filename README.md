@@ -1,19 +1,31 @@
-# 🎈 Blank app template
+# Tic-Tac-Toe — Minimax vs Alpha-Beta 
 
-A simple Streamlit app template for you to modify!
+A Streamlit web app that lets you play Tic-Tac-Toe in three modes while comparing Minimax and Alpha-Beta pruning.
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://blank-app-template.streamlit.app/)
+## Features
+- **Modes**: Human vs Human, Human vs AI, AI vs AI (auto-play).
+- **Algorithms**: Plain Minimax and Alpha-Beta pruning.
+- **Metrics**: Decision time, nodes explored, nodes pruned, pruning efficiency.
+- **UX**: Clear turn indicator, clickable cells, restart & mode/algorithm switching, auto-play with speed control, draw/lose indicator, highlighted current.
 
-### How to run it on your own machine
+## Run locally or...
 
-1. Install the requirements
+```bash
+pip install -r requirements.txt
+streamlit run app.py
+```
+## ...visit website
 
-   ```
-   $ pip install -r requirements.txt
-   ```
+https://crossandcircles.streamlit.app/
 
-2. Run the app
+## Notes
+- Evaluation function: +10 AI win, -10 opponent win, 0 draw; depth is incorporated to prefer quicker wins / slower losses.
+- Alpha-Beta pruning metrics include both **nodes explored** and **nodes pruned**.
 
-   ```
-   $ streamlit run streamlit_app.py
-   ```
+## Added Files
+
+- README.md
+- requirements.txt
+- soundgame.mp3
+- streamlit_app.py
+
