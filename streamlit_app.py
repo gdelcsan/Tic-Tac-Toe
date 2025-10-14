@@ -322,7 +322,7 @@ info = st.container()
 with info:
     left, right = st.columns([1,1])
     with left:
-        st.markdown(":white[Game Info]")
+        st.subheader("Game Info")
         if st.session_state.winner == "Draw":
             st.success("It's a draw!")
         elif st.session_state.winner in ["X", "O"]:
