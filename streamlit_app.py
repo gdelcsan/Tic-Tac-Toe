@@ -341,9 +341,9 @@ with info:
             st.info(f"**{st.session_state.current}** to move.")
 
         if st.session_state.mode == "Human vs AI":
-            st.caption(f"You are **{st.session_state.human_symbol}**. AI plays **{'O' if st.session_state.human_symbol=='X' else 'X'}** using **{st.session_state.ai1_algo}**.")
+            st.markdown(f"<p class='white-text'>You are <b>{st.session_state.human_symbol}</b>. "f"AI plays <b>{'O' if st.session_state.human_symbol == 'X' else 'X'}</b> "f"using <b>{st.session_state.ai1_algo}</b>.</p>",unsafe_allow_html=True)
         elif st.session_state.mode == "AI vs AI (Auto-play)":
-            st.caption(f"X uses **{st.session_state.ai1_algo}**, O uses **{st.session_state.ai2_algo}**. Use the sidebar to start/stop and adjust speed.")
+            st.markdown(f"<p class='white-text'>X uses <b>{st.session_state.ai1_algo}</b>, "f"O uses <b>{st.session_state.ai2_algo}</b>. "f"Use the sidebar to start/stop and adjust speed.</p>",unsafe_allow_html=True)
         else:
             st.markdown('<p style="color: #FFFFFF; font-size: 12px;">Two humans take turns on this device.</p>', unsafe_allow_html=True)
 
