@@ -4,7 +4,7 @@ from dataclasses import dataclass, field
 from typing import List, Optional, Tuple, Callable, Dict
 
 # ---------------------- Page Setup ----------------------
-st.set_page_config(page_title="Tic-Tac-Toe Games", page_icon="🕹️")
+st.set_page_config(page_title="Tic-Tac-Toe Game", page_icon="🕹️")
 
 st.markdown("""
     <style>
@@ -13,7 +13,7 @@ st.markdown("""
     }
             
     .stButton>button {
-        border-radius: 10px;
+        border-radius: 30px;
         background-color: #BA4C4C;
         font-weight: 600;
     }
