@@ -363,9 +363,9 @@ with info:
     with left:
         st.markdown('<p style="color: #FFFFFF; font-size: 24px;">Game Info</p>', unsafe_allow_html=True)
         if st.session_state.winner == "Draw":
-            st.success("It's a draw!")st.markdown(f"""<div style="background-color: #68A886;color: white;padding: 0.75rem;border-radius: 8px;border: 1px solid #444;font-size: 1rem;">It's a draw!</div>""",unsafe_allow_html=True)
+            st.markdown(f"""<div style="background-color: #68A886;color: white;padding: 0.75rem;border-radius: 8px;border: 1px solid #444;font-size: 1rem;">It's a draw!</div>""",unsafe_allow_html=True)
         elif st.session_state.winner in ["X", "O"]:
-            st.markdown(f"""<div style="background-color: #68A886;color: white;padding: 0.75rem;border-radius: 8px;border: 1px solid #444;font-size: 1rem;"><b>{st.session_state.current}</b> wins!</div>""",unsafe_allow_html=True)
+            st.markdown(f"""<div style="background-color: #68A886;color: white;padding: 0.75rem;border-radius: 8px;border: 1px solid #444;font-size: 1rem;"><b>{st.session_state.current}</b> lost 😞</div>""",unsafe_allow_html=True)
         else:
             st.markdown(f"""<div style="background-color: #8A4A4A;color: white;padding: 0.75rem;border-radius: 8px;border: 1px solid #444;font-size: 1rem;"><b>{st.session_state.current}</b>'s turn.</div>""",unsafe_allow_html=True)
 
