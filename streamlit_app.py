@@ -8,11 +8,9 @@ st.set_page_config(page_title="Tic-Tac-Toe Games", page_icon="🕹️")
 
 st.markdown("""
     <style>
-    .stApp {{
-            background-image: url("board.png");
-            background-size: cover;
-            background-attachment: fixed; /* Optional: keeps background fixed on scroll */
-    }}
+    .stApp {
+        background-color: #4A4548;
+    }
             
     .stButton>button {
         border-radius: 10px;
@@ -87,14 +85,27 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
+def add_bg_from_url(url):
+    page_bg_img = f'''
+    <style>
+    .stApp {{
+        background-image: url("{https://www.creativefabrica.com/wp-content/uploads/2022/08/17/1660722853/Tic-Tac-Toe-Board-Minimalist-black-version-580x386.jpg}");
+        background-size: cover;
+        background-attachment: fixed;
+    }}
+    </style>
+    '''
+    st.markdown(page_bg_img, unsafe_allow_html=True)
+
+# Example usage with a URL
+add_bg_from_url("https://example.com/your_image.jpg")
+
 # ---------------------- Game & AI Core ----------------------
 WIN_COMBOS = [
     (0, 1, 2), (3, 4, 5), (6, 7, 8),   # rows
     (0, 3, 6), (1, 4, 7), (2, 5, 8),   # cols
     (0, 4, 8), (2, 4, 6)               # diagonals
 ]
-
-set_png_as_page_bg('board.png')
 
 def check_winner(board: List[str]) -> Tuple[Optional[str], Optional[Tuple[int,int,int]]]:
     for a,b,c in WIN_COMBOS:
