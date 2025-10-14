@@ -12,10 +12,6 @@ st.markdown("""
     .stApp {
         background-color: #4A4548;
     }
-
-    div[data-testid="stNotification"] p {
-    color: white !important;
-    }
             
     /* Make widgets pop */
     .stButton>button {
@@ -378,7 +374,7 @@ with info:
         elif st.session_state.winner in ["X", "O"]:
             st.success(f"**{st.session_state.winner}** wins!")
         else:
-            st.info(f"**{st.session_state.current}** to move.")
+            st.markdown(f"""<div style="background-color: #222;color: white;padding: 0.75rem;border-radius: 8px;border: 1px solid #444;font-size: 1rem;"><b>{st.session_state.current}</b> to move.</div>""",unsafe_allow_html=True)
 
         if st.session_state.mode == "Human vs AI":
             st.markdown(f"<p class='white-text'>You are <b>{st.session_state.human_symbol}</b>. "f"AI plays <b>{'O' if st.session_state.human_symbol == 'X' else 'X'}</b> "f"using <b>{st.session_state.ai1_algo}</b>.</p>",unsafe_allow_html=True)
