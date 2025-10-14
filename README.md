@@ -2,17 +2,22 @@
 
 A Streamlit web app that lets you play Tic-Tac-Toe in three modes while comparing Minimax and Alpha-Beta pruning.
 
+# Creation Info
+
+Gabriela del Cristo - CAI4002
+
 ## Features
 - **Modes**: Human vs Human, Human vs AI, AI vs AI (auto-play).
 - **Algorithms**: Plain Minimax and Alpha-Beta pruning.
 - **Metrics**: Decision time, nodes explored, nodes pruned, pruning efficiency.
 - **UX**: Clear turn indicator, clickable cells, restart & mode/algorithm switching, auto-play with speed control, draw/lose indicator, highlighted current.
+- **Extra**: Music that can be toggled on/off.
 
 ## Run locally or...
 
 ```bash
 pip install -r requirements.txt
-streamlit run app.py
+streamlit run streamlit_app.py
 ```
 ## ...visit website
 
