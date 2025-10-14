@@ -263,7 +263,7 @@ if colA.button("Restart"):
     st.session_state.autoplay = False
 if st.session_state.mode == "AI vs AI (Auto-play)":
     play_col1, play_col2 = st.sidebar.columns(2)
-    if play_col1.button("▶ Next"):
+    if play_col1.button("▶ Play"):
         st.session_state.autoplay = True
     if play_col2.button("⏸ Stop"):
         st.session_state.autoplay = False
@@ -353,9 +353,8 @@ if st.session_state.mode == "AI vs AI (Auto-play)" and st.session_state.autoplay
         )
         ai_move(current_algo, st.session_state.current)
 
-        # ✅ rerun after each move to keep autoplaying
         import time
-        time.sleep(st.session_state.ai_delay)  # respect your speed slider
+        time.sleep(st.session_state.ai_delay) 
         st.rerun()
 
 # ---------------------- Info & Metrics ----------------------
