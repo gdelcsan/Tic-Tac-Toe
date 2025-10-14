@@ -20,6 +20,11 @@ st.markdown("""
         font-weight: 600;
     }
 
+    .white-text {
+    color: white;
+    font-size: 0.9rem;  /* similar size to caption */
+    }
+
     [data-testid="stSidebarContent"] {
         background-color: #4A4548; 
         color: #FFFFFF; 
