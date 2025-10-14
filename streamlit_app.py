@@ -338,7 +338,7 @@ with info:
             st.caption("Two humans take turns on this device.")
 
     with right:
-        st.subheader("Performance (per AI move)")
+        st.markdown('<p style="color: #FF5733; font-size: 24px;">Preformance (per AI move)</p>', unsafe_allow_html=True)
         if st.session_state.perf_log:
             st.dataframe(st.session_state.perf_log, use_container_width=True)
         else:
