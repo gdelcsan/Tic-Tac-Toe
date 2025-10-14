@@ -10,7 +10,7 @@ st.markdown("""
     <style>
     /* Set background color for the whole app */
     .stApp {
-        background-color: #E7C5C5;
+        background-color: #292528;
     }
             
     /* Make widgets pop */
@@ -38,7 +38,7 @@ st.markdown("""
             
     /* Title style */
     .header {
-    color: #B24478;
+    color: #FFFFFF;
     text-align: center;
     padding: 2.5rem 1rem;
     }
