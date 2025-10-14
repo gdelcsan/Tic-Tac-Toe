@@ -53,6 +53,24 @@ st.markdown("""
     padding: 2.5rem 1rem;
     }
 
+    /* Make the selectbox label text in the sidebar white */
+    section[data-testid="stSidebar"] label p {
+    color: white !important;
+    font-weight: bold;     /* optional */
+    }
+
+    /* Optional: make the dropdown text itself white */
+    section[data-testid="stSidebar"] div[data-baseweb="select"] * {
+    color: white !important;
+    background-color: #222 !important;  /* optional: dark background for contrast */
+    }
+
+    /* Optional: change the dropdown border color */
+    section[data-testid="stSidebar"] div[data-baseweb="select"] {
+    border: 1px solid #555 !important;
+    border-radius: 6px;
+    }
+
     </style>
 """, unsafe_allow_html=True)
 
