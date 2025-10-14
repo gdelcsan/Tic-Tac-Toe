@@ -8,9 +8,11 @@ st.set_page_config(page_title="Tic-Tac-Toe Games", page_icon="🕹️")
 
 st.markdown("""
     <style>
-    .stApp {
-        background-color: #4A4548;
-    }
+    .stApp {{
+            background-image: url("board.png");
+            background-size: cover;
+            background-attachment: fixed; /* Optional: keeps background fixed on scroll */
+    }}
             
     .stButton>button {
         border-radius: 10px;
