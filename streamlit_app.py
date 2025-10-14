@@ -19,6 +19,11 @@ st.markdown("""
         background-color: #BA4C4C;
         font-weight: 600;
     }
+
+    [data-testid="stSidebarContent"] {
+        background-color: #4A4548; 
+        color: #FFFFFF; 
+    }
             
     div[data-testid="stButton"] button {
         aspect-ratio: 1 / 1;          /* Makes each button square */
