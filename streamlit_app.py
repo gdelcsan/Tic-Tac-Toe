@@ -84,7 +84,7 @@ st.markdown("""
 
     /* Enlarge X / O on the board */
     .ttt-wrapper div[data-testid="stButton"] > button {
-    font-size: clamp(2.6rem, 7vw, 4.2rem) !important;
+    font-size: clamp(10rem, 25vw, 16rem) !important;
     line-height: 1 !important;
     padding: 0 !important;
     background-image: none !important;  /* in case you had image tiles earlier */
@@ -92,7 +92,7 @@ st.markdown("""
 
     /* Keep empty cells blank but square (your empty label is a single space " ") */
     .ttt-wrapper button[aria-label=" "] {
-    font-size: 10 !important;
+    font-size: 0 !important;
     }
 
     /* Make sure tiles stay perfectly square */
