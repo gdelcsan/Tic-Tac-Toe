@@ -94,6 +94,8 @@ WIN_COMBOS = [
     (0, 4, 8), (2, 4, 6)               # diagonals
 ]
 
+set_png_as_page_bg('board.png')
+
 def check_winner(board: List[str]) -> Tuple[Optional[str], Optional[Tuple[int,int,int]]]:
     for a,b,c in WIN_COMBOS:
         if board[a] and board[a] == board[b] == board[c]:
