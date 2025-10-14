@@ -13,7 +13,7 @@ st.markdown("""
     }
             
     .stButton>button {
-        border-radius: 30px;
+        border-radius: 10px;
         background-color: #BA4C4C;
         font-weight: 600;
     }
@@ -69,12 +69,12 @@ st.markdown("""
 
     section[data-testid="stSidebar"] label p {
     color: white !important;
-    font-weight: bold;     /* optional */
+    font-weight: bold;    
     }
 
     section[data-testid="stSidebar"] div[data-baseweb="select"] * {
     color: white !important;
-    background-color: #222 !important;  /* optional: dark background for contrast */
+    background-color: #222 !important;  
     }
 
     section[data-testid="stSidebar"] div[data-baseweb="select"] {
@@ -319,7 +319,7 @@ def cell_label(i: int) -> str:
         if v == "O": return "✨⭕✨"
     if v == "X": return "❌"
     if v == "O": return "⭕"
-    return " "  # hint: clickable
+    return " "
 
 grid = st.container()
 with grid:
