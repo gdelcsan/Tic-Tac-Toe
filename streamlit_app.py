@@ -27,7 +27,7 @@ st.markdown("""
     }
 
     div[data-testid="stMetricValue"] {
-    color: white !important;
+    color: E7C5C5 !important;
     font-weight: 700;
     font-size: 1.5rem;
     }
@@ -40,7 +40,7 @@ st.markdown("""
 
     .white-text {
     color: white;
-    font-size: 0.9rem;  /* similar size to caption */
+    font-size: 0.9rem; 
     }
 
     [data-testid="stSidebarContent"] {
