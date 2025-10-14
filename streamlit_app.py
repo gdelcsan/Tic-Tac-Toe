@@ -16,7 +16,7 @@ st.markdown("""
     /* Make widgets pop */
     .stButton>button {
         border-radius: 10px;
-        background-color: #BD587C;
+        background-color: #BA4C4C;
         font-weight: 600;
     }
             
