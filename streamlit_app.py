@@ -355,5 +355,5 @@ with info:
             st.markdown('<p style="color: #FFFFFF; font-size: 12px;">AI performance metrics will appear here when the AI makes a move.</p>', unsafe_allow_html=True)
 
 # ---------------------- Footer ----------------------
-with st.expander("""<p class='white-text'>How scoring works (evaluation function)</p>"""):
+with st.expander("""<p class='white-text'>How scoring works (evaluation function)</p>""",unsafe_allow_html=True):
     st.markdown("""<p class='white-text'>Tic-Tac-Toe is a <b>two-player, zero-sum, deterministic, perfect-information, sequential game</b> played on a 3×3 board. Players take turns marking empty cells with their symbol ('X' or 'O'). The first player to align three symbols in a row (horizontally, vertically, or diagonally) wins. If the board fills up with no winner, the game ends in a draw.</p>""",unsafe_allow_html=True)
