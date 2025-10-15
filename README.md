@@ -4,7 +4,9 @@ A Streamlit web app that lets you play Tic-Tac-Toe in three modes while comparin
 
 # Creation Info
 
-Gabriela del Cristo - CAI4002
+Gabriela del Cristo
+Alessandro Sanchez-Greco
+CAI4002
 
 ## Features
 - **Modes**: Human vs Human, Human vs AI, AI vs AI (auto-play).
