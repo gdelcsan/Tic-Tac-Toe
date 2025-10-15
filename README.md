@@ -5,7 +5,9 @@ A Streamlit web app that lets you play Tic-Tac-Toe in three modes while comparin
 # Creation Info
 
 Gabriela del Cristo
+
 Alessandro Sanchez-Greco
+
 CAI4002
 
 ## Features
