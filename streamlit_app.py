@@ -7,7 +7,7 @@ from typing import List, Optional, Tuple, Callable
 # ---------------------- Page Setup ----------------------
 st.set_page_config(page_title="Tic-Tac-Toe Game", page_icon="🕹️")
 
-tab1, tab2 = st.tabs(["🎮 Game", "📄 Code"])
+tab1, tab2 = st.tabs(["Game", "Code"])
 
 # ---------------------- Custom CSS ----------------------
 st.markdown("""
@@ -225,7 +225,7 @@ with tab1:
         drop_piece(move, st.session_state.current)
 
     # --- Header ---
-    st.markdown('<div class="header"><h1>Tic-Tac-Toe Game</h1></div>', unsafe_allow_html=True)
+    st.markdown('<div class="header"><h1>❌ Tic-Tac-Toe Games ⭕</h1></div>', unsafe_allow_html=True)
     st.audio("./soundgame.mp3", format="audio/mp3", autoplay=True, loop=True)
 
     meta1, meta2, meta3 = st.columns(3)
@@ -266,15 +266,16 @@ with tab1:
             st.rerun()
 
     # --- Performance Table ---
-    st.markdown("### 📊 AI Performance Metrics")
+    st.markdown('<h3 style="color:#FFFFFF; margin: 0.5rem 0;">AI Performance Metrics</h3>', unsafe_allow_html=True)
     if st.session_state.perf_log:
         st.dataframe(st.session_state.perf_log, use_container_width=True)
     else:
-        st.caption("Performance metrics will appear after the first AI move.")
+        st.caption("Performance metrics will appear after the first AI move.", help=None)
+        st.markdown("<style>div[data-testid='stCaptionContainer'] p{color:#FFFFFF !important;}</style>", unsafe_allow_html=True)
 
 # ---------------------- Tab 2: Embedded PDF ----------------------
 with tab2:
-    st.subheader("📄 Puzzle Game Python Code")
+    st.subheader("Tic-Tac-Toe Python Code")
     drive_file_id = "15fVvzmqh3zSYLWv0SzJjVmca1LA4k1_3"
     st.markdown(
         f'<iframe src="https://drive.google.com/file/d/{drive_file_id}/preview" width="100%" height="800"></iframe>',
