@@ -3,6 +3,11 @@ import time
 from dataclasses import dataclass, field
 from typing import List, Optional, Tuple, Callable, Dict
 
+tab1, tab2 = st.tabs([
+    "Game",
+    "Code",
+])
+
 # ---------------------- Page Setup ----------------------
 st.set_page_config(page_title="Tic-Tac-Toe Game", page_icon="🕹️")
 
@@ -92,6 +97,7 @@ WIN_COMBOS = [
     (0, 4, 8), (2, 4, 6)               # diagonals
 ]
 
+with tab1:
 def check_winner(board: List[str]) -> Tuple[Optional[str], Optional[Tuple[int,int,int]]]:
     for a,b,c in WIN_COMBOS:
         if board[a] and board[a] == board[b] == board[c]:
@@ -388,3 +394,11 @@ with info:
 # ---------------------- Footer ----------------------
 with st.expander("How scoring works (evaluation function)"):
     st.markdown("""<p class='white-text'>Tic-Tac-Toe is a <b>two-player, zero-sum, deterministic, perfect-information, sequential game</b> played on a 3×3 board. Players take turns marking empty cells with their symbol ('X' or 'O'). The first player to align three symbols in a row (horizontally, vertically, or diagonally) wins. If the board fills up with no winner, the game ends in a draw.</p>""",unsafe_allow_html=True)
+
+with tab2:
+    st.subheader("Puzzle Game Python Code")
+    drive_file_id = "15fVvzmqh3zSYLWv0SzJjVmca1LA4k1_3"
+    st.markdown(
+        f'<iframe src="https://drive.google.com/file/d/15fVvzmqh3zSYLWv0SzJjVmca1LA4k1_3/preview" width="100%" height="800"></iframe>',
+        unsafe_allow_html=True
+    )
