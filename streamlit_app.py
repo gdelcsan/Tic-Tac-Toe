@@ -280,7 +280,7 @@ with tab1:
 
 # ---------------------- Tab 2: Embedded PDF ----------------------
 with tab2:
-    st.subheader("Tic-Tac-Toe Python Code")
+    st.markdown('<h3 style="color:white; margin-top:0;">Tic-Tac-Toe Game Python Code</h3>', unsafe_allow_html=True)
     drive_file_id = "15fVvzmqh3zSYLWv0SzJjVmca1LA4k1_3"
     st.markdown(
         f'<iframe src="https://drive.google.com/file/d/{drive_file_id}/preview" width="100%" height="800"></iframe>',
