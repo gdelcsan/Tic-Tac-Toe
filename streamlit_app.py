@@ -26,6 +26,23 @@ st.markdown("""
     section[data-testid="stSidebar"] label p { color: white !important; font-weight: bold; }
     section[data-testid="stSidebar"] div[data-baseweb="select"] * { color: white !important; background-color: #222 !important; }
     section[data-testid="stSidebar"] div[data-baseweb="select"] { border: 1px solid #555 !important; border-radius: 6px; }
+    /* Tab label color */
+    button[data-baseweb="tab"] > div {
+    color: white !important;
+    font-weight: 600;
+    font-size: 1rem;
+    }
+    /* Active tab underline */
+    button[data-baseweb="tab"][aria-selected="true"] > div {
+    color: white !important;
+    border-bottom: 2px solid white;
+    }
+    /* Optional: darker background for the tab container */
+    div[data-baseweb="tab-list"] {
+    background-color: #292528;
+    border-radius: 5px;
+    padding: 0.3rem;
+    }
     </style>
 """, unsafe_allow_html=True)
 
